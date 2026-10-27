@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>Desafio | HBO Max</title>
+  </head>
+  <body>
+
+    <!-- barra de navegação no topo com logo padronizado -->
+    <nav class="menu">
+      <a href="index.html" class="menu__logo-text">
+        hbo max
+      </a>
+      <div>
+        <a href="login.html" class="menu__item">entrar</a>
+        <a href="#subscription" class="menu__item menu__item--button button">
+          assine agora
+        </a>
+      </div>
+    </nav>
+
+    <!-- cabeçalho principal com gradiente repaginado -->
+    <header class="header">
+      <div class="header__content">
+        <div class="header__channels">
+          <span class="header__channel-badge">hbo</span>
+          <span class="header__channel-badge">dc</span>
+          <span class="header__channel-badge">warner</span>
+          <span class="header__channel-badge">cartoon</span>
+          <span class="header__channel-badge">originals</span>
+        </div>
+        <h1 class="header__title">
+          <span class="header__title--light">curta as melhores histórias</span>
+          para todo mundo
+        </h1>
+        <div class="divider"></div>
+        <div class="offer">
+          <p>Assinaturas a partir de</p>
+          <p class="offer__price">
+            R$ 14,15 <span class="offer__price--small">/mês*</span>
+          </p>
+        </div>
+        <a href="#subscription" class="button button--gradient header__button">
+          assine agora
+        </a>
+        <p class="text--small">
+          *aplicável ao plano anual com pagamento antecipado.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- seção de planos de assinatura  -->
+      <section id="subscription" class="subscription">
+        <div class="container">
+          <h2 class="title">Conheça nossos planos e economize na assinatura trimestral ou anual com pagamento antecipado.</h2>
+          
+          <div class="subscription__plans">
+            
+            <!-- card do plano mobile -->
+            <div class="subscription__card">
+              <div>
+                <div class="subscription__plan">
+                  <h3>mobile</h3>
+                  <p class="subscription__price">
+                    R$ 49,90 <span class="text--small">/mês</span>
+                  </p>
+                </div>
+                <ul class="subscription__goals">
+                  <li class="subscription__description">Aproveite em Smartphones e Tablets.</li>
+                  <li class="subscription__description">Assista em 1 tela por vez.</li>
+                  <li class="subscription__description">Resolução adaptada para o seu aparelho.</li>
+                  <li class="subscription__description">Baixe seus conteúdos favoritos para ver offline.</li>
+                </ul>
+              </div>
+              <button class="button button--gradient">Escolher Mobile</button>
+            </div>
+
+            <!-- card do plano multitelas -->
+            <div class="subscription__card">
+              <div>
+                <div class="subscription__plan">
+                  <h3>multitelas</h3>
+                  <p class="subscription__price">
+                    R$ 99,90 <span class="text--small">/mês</span>
+                  </p>
+                </div>
+                <ul>
+                  <li class="subscription__description">Disponível em todos os seus dispositivos.</li>
+                  <li class="subscription__description">Suporte a chromecast e airplay.</li>
+                  <li class="subscription__description">Assista em até 3 telas simultâneas.</li>
+                  <li class="subscription__description">Conteúdo em alta definição e 4k.</li>
+                  <li class="subscription__description">Crie até 5 perfis personalizados.</li>
+                </ul>
+              </div>
+              <button class="button button--gradient">Escolher Multitelas</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- seção de descoberta de universos / conteúdos -->
+      <section id="contents" class="contents container">
+        <h2 class="title">Descubra Novos Universos</h2>
+        <div class="contents__container">
+          <div class="contents__card"><div class="card-inner-text">hbo</div></div>
+          <div class="contents__card"><div class="card-inner-text">max originals</div></div>
+          <div class="contents__card"><div class="card-inner-text">dc comics</div></div>
+          <div class="contents__card"><div class="card-inner-text">warner bros</div></div>
+          <div class="contents__card"><div class="card-inner-text">cartoon network</div></div>
+          <div class="contents__card"><div class="card-inner-text">champions league</div></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- rodapé informativo -->
+    <footer class="footer container">
+      <div>
+        <a class="footer__link" href="#">início</a>
+        <a class="footer__link" href="#">em breve</a>
+        <a class="footer__link" href="#">destaques</a>
+        <a class="footer__link" href="#">séries</a>
+        <a class="footer__link" href="#">ajuda</a>
+      </div>
+      <p class="text--small footer__legal">
+        © 2026 Desafio DIO | Higor de Campos | Projeto Educacional Adaptado.
+      </p>
+      <div class="footer__social">
+        <a href="#" class="footer__link">facebook</a>
+        <a href="#" class="footer__link">twitter</a>
+        <a href="#" class="footer__link">instagram</a>
+        <a href="#" class="footer__link">youtube</a>
+      </div>
+    </footer>
+
+  </body>
+</html>

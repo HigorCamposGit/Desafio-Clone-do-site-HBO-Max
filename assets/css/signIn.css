@@ -1,0 +1,122 @@
+@import url("./global.css");
+
+body {
+  background: radial-gradient(circle at center, #120d26 0%, var(--primary-color) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* alinhar corretamente com a página inicial */
+.menu {
+  position: relative;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+/* estilo do logo em texto padronizado */
+.menu__logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* container centralizado */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  padding: 60px 24px;
+}
+
+/* caixa do formulário moderna e limpa */
+.login {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--form-bg);
+  border: 1px solid var(--form-border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.login__title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login__label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.login__field {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-main);
+  padding: 16px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.login__field:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.login__field::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login__actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.login__link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.login__link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    padding: 24px;
+  }
+  .login__actions {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/signIn.css" />
+    <title>Entrar | Desafio DIO</title>
+  </head>
+  <body>
+
+    <!-- menu de navegação -->
+    <nav class="menu">
+      <a href="index.html" class="menu__logo-text">
+        hbo max
+      </a>
+      <div>
+        <a href="login.html" class="menu__item">entrar</a>
+        <a href="index.html#subscription" class="menu__item menu__item--button button">
+          assine agora
+        </a>
+      </div>
+    </nav>
+
+    <!-- container centralizado do formulário -->
+    <main class="content">
+      <form class="login container">
+        <h1 class="login__title">Entrar na sua conta</h1>
+        <label class="login__label" for="email">Digite o seu e-mail:</label>
+        <input
+          class="login__field"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="seu.email@exemplo.com"
+          required
+        />
+        <input
+          class="login__field"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="sua senha secreta"
+          minlength="6"
+          required
+        />
+
+        <div class="login__actions">
+          <button type="submit" class="button button--gradient">entrar</button>
+          <a href="#" class="login__link">esqueceu a senha?</a>
+        </div>
+      </form>
+    </main>
+
+    <!-- rodapé -->
+    <footer class="footer container">
+      <div>
+        <a class="footer__link" href="index.html">voltar ao início</a>
+        <a class="footer__link" href="#">central de ajuda</a>
+      </div>
+      <p class="text--small footer__legal">
+        © 2026 Desafio DIO | Higor de Campos | Projeto Educacional Adaptado.
+      </p>
+    </footer>
+
+  </body>
+</html>

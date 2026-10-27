@@ -1,0 +1,231 @@
+@import url("global.css");
+
+/* background*/
+main {
+  background-color: var(--primary-color);
+}
+
+/* cabeçalho estilo moderno */
+.header {
+  position: relative;
+  margin-top: 60px;
+  padding: 120px 0 200px;
+  background: radial-gradient(circle at center, #1e1b4b 0%, #0b0f19 100%);
+}
+
+.header__content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0 24px;
+}
+
+.header__channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+
+.header__channel-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.header__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header__title--light {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* visual moderno */
+.divider {
+  width: 60%;
+  max-width: 500px;
+  height: 3px;
+  background: var(--divider-color);
+  border-radius: 2px;
+}
+
+.offer__price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
+/* planos - assinaturas */
+.subscription {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--primary-color) 0%, #120d26 100%);
+  position: relative;
+}
+
+/* efeito 3D de rotação - semelhante ao da aula */
+.subscription__plans {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.subscription__card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
+  min-height: 550px;
+  text-align: left;
+  transition: transform 1s ease-in-out, border-color 0.3s;
+}
+
+/* rotação 3D ao passar o mouse nos cards */
+.subscription__plans:has(.subscription__card:nth-child(1):hover)
+  .subscription__card:nth-child(2) {
+  transform: rotateY(-25deg);
+}
+
+.subscription__plans:has(.subscription__card:nth-child(2):hover)
+  .subscription__card:nth-child(1) {
+  transform: rotateY(25deg);
+}
+
+.subscription__card:hover {
+  border-color: var(--secondary-color);
+}
+
+.subscription__description {
+  list-style: none;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.subscription__description::before {
+  content: "+ ";
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.subscription__price {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+.subscription__plan {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.subscription__plan h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* grade conteúdos */
+.contents {
+  margin: 80px auto;
+}
+
+.contents__container {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.contents__card {
+  height: 220px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e1b4b, #3b0764);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.card-inner-text {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.contents__card:hover {
+  transform: scale(1.03);
+  border-color: var(--secondary-color);
+  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+}
+
+/* logo em texto */
+.menu__logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* responsividade*/
+@media screen and (max-width: 900px) {
+  .subscription__plans {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contents__container {
+    grid-template-columns: 1fr;
+  }
+  .header__title {
+    font-size: 2rem;
+  }
+}
